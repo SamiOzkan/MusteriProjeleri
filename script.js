@@ -17,3 +17,7 @@ function showSlides() {
     // Her 3 saniyede bir slaytı değiştir
     setTimeout(showSlides, 3000);
 }
+
+function toggleMenu() {
+    document.querySelector(".navbar").classList.toggle("active");
+}
