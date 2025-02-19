@@ -9,39 +9,99 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background-color: #333;
+/* Genel Header Stili */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #2c3e50; /* Koyu mavi-gri tonları */
     color: white;
-    padding: 1rem 0;
 }
 
-nav ul {
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menü */
+.navbar ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
-    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+.navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 18px;
 }
+
+/* Mobil İçin Hamburger Menü */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobil Görünüm (768px ve altı) */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Menü başlangıçta gizli */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #34495e;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Hamburger menüyü göster */
+    }
+
+    .navbar.active ul {
+        display: flex; /* Menü açıldığında görünür yap */
+    }
+}
+
 
 .hero {
-    background-image: url('https://via.placeholder.com/1200x600');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background-image: url('AvukatSemaWeb/header.png'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tam ekran kaplayacak şekilde ayarla */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Tekrar etmesini engelle */
+    color: black; /* Metin rengi */
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 20px; /* Kenarlardan boşluk ekleyerek mobilde daha iyi görünmesini sağla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px; /* Minimum yükseklik belirleyerek daha dengeli görünüm sağla */
 }
 
+/* Mobil Uyumlu Yapı (768px ve altı) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+        background-size: contain; /* Küçük ekranlarda daha iyi görünmesi için */
+    }
+}
+
+
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .hero p {
@@ -50,7 +110,7 @@ nav ul li a {
 }
 
 .cta-button {
-    background-color: #e67e22;
+    background-color: #3e34ab;
     color: white;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -59,7 +119,7 @@ nav ul li a {
 }
 
 .cta-button:hover {
-    background-color: #d35400;
+    background-color: #524d93;
 }
 
 footer {
@@ -110,20 +170,41 @@ footer {
 
 .services {
     display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
-    background-color: #f4f4f4;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 50px;
 }
 
 .service-item {
+    width: 30%; /* Ekran büyükken üçlü düzen */
+    min-width: 280px; /* Küçük ekranlarda genişlik ayarı */
     text-align: center;
-    max-width: 300px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-item img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+/* Tablet görünümü (768px ve altı) */
+@media (max-width: 768px) {
+    .service-item {
+        width: 45%; /* İki sütunlu yapı */
+    }
+}
+
+/* Mobil görünüm (480px ve altı) */
+@media (max-width: 480px) {
+    .service-item {
+        width: 100%; /* Tek sütun */
+    }
 }
 
 .service-item h3 {
