@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="logo">Avukat SEMA CANDAN</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="navbar">
             <ul>
                 <li><a href="#">Anasayfa</a></li>
                 <li><a href="#">Hizmetler</a></li>
@@ -17,6 +19,7 @@
             </ul>
         </nav>
     </header>
+    
 
     <section class="hero">
         <div class="hero-content">
@@ -27,47 +30,43 @@
     </section>
 
     <!-- Slider -->
-    <section class="slider">
-        <div class="slide fade">
-            <img src="https://via.placeholder.com/1200x400" alt="Slider Image 1">
-            <div class="text">
-                <h2>Profesyonel Hukuki Destek</h2>
-                <p>Her türlü hukuki sorununuzda yanınızdayız.</p>
-            </div>
-        </div>
-        <div class="slide fade">
-            <img src="https://via.placeholder.com/1200x400" alt="Slider Image 2">
-            <div class="text">
-                <h2>İhtiyaçlarınıza Uygun Çözümler</h2>
-                <p>Uzman avukatlarımızla en iyi çözüme ulaşın.</p>
-            </div>
-        </div>
-        <div class="slide fade">
-            <img src="https://via.placeholder.com/1200x400" alt="Slider Image 3">
-            <div class="text">
-                <h2>Güvenli ve Hızlı Hizmet</h2>
-                <p>Hukuki işlemlerinizi hızlı ve güvenli bir şekilde hallediyoruz.</p>
-            </div>
-        </div>
-    </section>
-
     <section class="services">
         <div class="service-item">
-            <img src="https://via.placeholder.com/400x300" alt="Service Image 1">
+            <img src="AvukatSemaWeb/slider2.png" alt="Service Image 1">
             <h3>Hizmet 1</h3>
             <p>Bu alanda size sunduğumuz profesyonel hukuki hizmetler hakkında detaylı bilgi alabilirsiniz.</p>
         </div>
         <div class="service-item">
-            <img src="https://via.placeholder.com/400x300" alt="Service Image 2">
+            <img src="AvukatSemaWeb/slider1.jpg" alt="Service Image 2">
             <h3>Hizmet 2</h3>
             <p>Uzman ekibimizle iş hukuku, aile hukuku ve daha birçok alanda size yardımcı oluyoruz.</p>
         </div>
         <div class="service-item">
-            <img src="https://via.placeholder.com/400x300" alt="Service Image 3">
+            <img src="AvukatSemaWeb/slider2.png" alt="Service Image 3">
             <h3>Hizmet 3</h3>
             <p>Her türlü dava ve hukuki süreçte deneyimli ekibimizle yanınızdayız.</p>
         </div>
     </section>
+    
+
+    <section class="services">
+        <div class="service-item">
+            <img src="AvukatSemaWeb/slider1.jpg" alt="Service Image 1">
+            <h3>Hizmet 4</h3>
+            <p>Bu alanda size sunduğumuz profesyonel hukuki hizmetler hakkında detaylı bilgi alabilirsiniz.</p>
+        </div>
+        <div class="service-item">
+            <img src="AvukatSemaWeb/slider2.png" alt="Service Image 2">
+            <h3>Hizmet 5</h3>
+            <p>Uzman ekibimizle iş hukuku, aile hukuku ve daha birçok alanda size yardımcı oluyoruz.</p>
+        </div>
+        <div class="service-item">
+            <img src="AvukatSemaWeb/slider1.jpg" alt="Service Image 3">
+            <h3>Hizmet 6</h3>
+            <p>Her türlü dava ve hukuki süreçte deneyimli ekibimizle yanınızdayız.</p>
+        </div>
+    </section>
+    
 
     <footer>
         <p>&copy; 2025 Hukuk Bürosu. Tüm hakları saklıdır.</p>
@@ -75,7 +74,7 @@
 
     <!-- WhatsApp ve İletişim Butonları -->
     <div class="fixed-buttons">
-        <a href="https://wa.me/905xxxxxxxxx" class="whatsapp-button" target="_blank">
+        <a href="https://wa.me/905535836086" class="whatsapp-button" target="_blank">
             WhatsApp ile İletişime Geç
         </a>
         <a href="#contact" class="contact-button">
